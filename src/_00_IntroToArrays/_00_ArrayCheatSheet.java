@@ -5,7 +5,7 @@ import java.util.Random;
 public class _00_ArrayCheatSheet {
 	public static void main(String[] args) {
 		//1. make an array of 5 Strings
-            String[] names = {"bob","agatha","gillbert","fred","abcde"};
+            String[] names = {"bobbethan","agatha","gillbert","fred","abcde"};
 		//2. print the third element in the array
       	System.out.println(names[2]);
 		//3. set the third element to a different value
@@ -24,18 +24,54 @@ public class _00_ArrayCheatSheet {
 		//7. make an array of 50 integers
 			int[] places = new int[50];
 		//8. use a for loop to make every value of the integer array a random number
+			Random jop  = new Random();
 			
 for (int i = 0; i < places.length; i++) {
-	places[i-1] = i;
-	
+	places[i] = jop.nextInt(50)+1;
+	//System.out.println(places[i]);
 }
+System.out.println(  );
+System.out.println(  );
+System.out.println(  );
+System.out.println(  );
 		//9. without printing the entire array, print only the smallest number on the array
 
-		//10 print the entire array to see if step 8 was correct
+int smll = places[0];
+for (int i = 0; i < places.length; i++) {
+if (smll > places[i]) {
+	smll = places[i];
 
+}
+
+}
+System.out.println(smll);
+System.out.println( );
+System.out.println( );
+System.out.println( );
+System.out.println( );
+		//10 print the entire array to see if step 8 was correct
+for (int i = 0; i < places.length; i++) {
+	System.out.println(places[i]);
+}
 		//11. print the largest number in the array.
-		
+System.out.println( );
+System.out.println( );
+System.out.println( );
+
+int lrg = places[0];
+for (int i = 0; i < places.length; i++) {
+if (lrg < places[i]) {
+	lrg = places[i];
+
+}
+
+}
+System.out.println(lrg);
 		//12. print only the last element in the array
-		
+System.out.println( );
+System.out.println( );
+System.out.println( );
+
+		System.out.println(places[places.length-1]);
 	}
 }

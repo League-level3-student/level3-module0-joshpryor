@@ -9,6 +9,26 @@ import org.jointheleague.graphical.robot.Robot;
 public class _01_RobotRace {
 	//1. make a main method
 	
+	double g = .5;
+	static int f = 10;
+	public static void main(String[] args) {
+		Robot[] bob = new Robot[f];
+		for (int i = 0; i < f; i++) {
+			bob[i] = new Robot("vic");
+			bob[i].changeRobot("https://images-na.ssl-images-amazon.com/images/I/419nQMbKkYL._SX425_.jpg");
+			bob[i].setX(100+i*100);
+			bob[i].setY(500);
+			
+			bob[i].setSpeed(90);
+		
+		}
+		Random ran = new Random();
+		for (int j = 0; j < bob.length; j++) {
+			bob[j].turn(999);
+			bob[j].move(ran.nextInt(50)+1);
+		
+		
+	}}
 		//2. create an array of 5 robots.
 
 		//3. use a for loop to initialize the robots.
