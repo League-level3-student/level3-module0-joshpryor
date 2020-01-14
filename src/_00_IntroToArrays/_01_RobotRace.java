@@ -10,7 +10,8 @@ public class _01_RobotRace {
 	//1. make a main method
 	
 	double g = .5;
-	static int f = 10;
+	static int f = 5;
+	static boolean top = false;
 	public static void main(String[] args) {
 		Robot[] bob = new Robot[f];
 		for (int i = 0; i < f; i++) {
@@ -23,10 +24,22 @@ public class _01_RobotRace {
 		
 		}
 		Random ran = new Random();
+	{
+			
+		while (!top) {
 		for (int j = 0; j < bob.length; j++) {
-			bob[j].turn(999);
-			bob[j].move(ran.nextInt(50)+1);
-		
+	
+			
+				
+			bob[j].move(ran.nextInt(5)+1);
+			
+			if (bob[j].getY() <= 0) {
+				top = true;
+				bob[j].move(-100);
+				bob[j].turn(9999);
+			}
+			
+			}
 		
 	}}
 		//2. create an array of 5 robots.
@@ -47,4 +60,4 @@ public class _01_RobotRace {
 	    //9. make the robots race around a circular track.
 
 	
-}
+}}
